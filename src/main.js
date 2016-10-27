@@ -19,8 +19,12 @@ new Vue({
   	routes : [
   		{
   			path : '/',
-  			component : Home
+        redirect : "/home"
   		},
+      {
+        path : '/home',
+        component : Home
+      },
       {
         path : '/collections',
         component : Collection

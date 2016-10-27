@@ -94,7 +94,7 @@
 							<div class="btn"></div>
 							<p class="desc" v-text="item.desc"></p>
 							<p>
-								<a class="blue-link" v-text="item.articles"></a><span v-text="item.follower"></span>
+								<a class="blue-link" v-text="item.articles"></a>{{item.follower}}
 							</p>
 						</div>
 					</li>

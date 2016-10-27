@@ -52,7 +52,7 @@
 			a
 				&:first-child
 					color white
-				&.active
+				&.router-link-active
 					background-color #e78170
 					color white
 					text-shadow 0 1px 0 #de533a
@@ -71,7 +71,7 @@
 <template>
 	<div id="navBar">
 		<div class="dropdown">
-			<router-link v-for="(item, index) in navArr" :class="{active : index === activeIndex}"  :to="item.href" @click="changeStyle($event)">
+			<router-link v-for="(item, index) in navArr"  :to="item.href">
 				<i :class="item.type"></i>
 				<span class="title" v-text="item.title"></span>
 			</router-link>
@@ -100,7 +100,7 @@
 					{
 						type: "home",
 						title: "首页",
-						href: '/',
+						href: '/home',
 					},
 					{
 						type: "collections",
@@ -116,12 +116,6 @@
 			};
 		},
 		methods : {
-			changeStyle(event){
-				Array.prototype.slice.call(event.currentTarget.parentNode.children).forEach(function(item, index){
-					item.classList.remove("active");
-				});
-				event.currentTarget.classList.add("active");
-			}
 		}
 	}	
 </script>

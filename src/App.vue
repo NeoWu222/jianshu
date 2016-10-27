@@ -39,13 +39,20 @@
 	input
 	button
 		outline none
-	.blue-link
-		color #4094c7
 	body
 		font-size 14px
 		line-height 1
 		color #555
 		font-family Microsoft Yahei
+	.blue-link
+		color #4094c7
+	.btn
+		display inline-block
+		border-radius 4px
+		border 1px solid #555
+		border-color #d5d5d5
+		vertical-align middle
+		cursor pointer
 </style>
 <template>
   <div id="app">
@@ -56,6 +63,7 @@
 
 <script>
 	import NavBar from "./components/NavBar"
+	import Home from "./pages/Home"
 	export default {
 	  name: 'app',
 	  data(){
@@ -63,7 +71,8 @@
 	  	}
 	  },
 	  components: {
-	  	NavBar
+	  	NavBar,
+	  	Home
 	  }
 	}
 </script>
